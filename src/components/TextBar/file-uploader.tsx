@@ -4,7 +4,7 @@
 // var Minio = require('minio')
 import file from "../../assets/images/unnamed.jpg";
 import React, { useEffect, useRef } from "react";
-import * as Minio from "minio";
+// import * as Minio from "minio";
 
 const bucketID = process.env.REACT_APP_BUCKET_ID;
 
