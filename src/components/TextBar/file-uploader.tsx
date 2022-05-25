@@ -50,10 +50,11 @@ export const FileUploader = (props: any) => {
       secretKey: process.env.REACT_APP_SECRET_KEY,
       sessionToken: process.env.REACT_APP_SESSION_TOKEN,
     });
+    
     const insertFile = () => 
       minioClient.fPutObject(
         bucketID,
-        "test-image.png",
+        props.file.name,
         file,
         metaData,
         (err: any, objInfo: any) => {
@@ -64,7 +65,7 @@ export const FileUploader = (props: any) => {
         }
     );
     insertFile();
-  }, [metaData]);
+  }, [metaData, props.file.name]);
   return (
     <>
       {/* <h1>This is a file uploader</h1> */}

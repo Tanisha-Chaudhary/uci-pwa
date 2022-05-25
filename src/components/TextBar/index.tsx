@@ -73,6 +73,13 @@ const TextBar = (props: any) => {
 							<input type="file" name="file" style={{position: "absolute", fontSize: "50px", opacity: "0", right: "0", top: "0"}}
                 onChange={(event) => {
                   setSelectedImage(event.target.files[0])
+                  // var reader = new FileReader();
+                  // reader.onload = function(event) {
+                  //   // The file's text will be printed here
+                  //   console.log(event.target.result)
+                  // };
+
+                  //   reader.readAsDataURL(event.target.files[0]);
                 }}/>
 						</div> 
         <button className="send__btn" onClick={sendMessage} type="submit">
