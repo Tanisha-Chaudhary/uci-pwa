@@ -2,7 +2,7 @@
 // var file = "../../assets/images/unnamed.jpg";
 // require("dotenv").config();
 // var Minio = require('minio')
-// import file from "../../assets/images/unnamed.jpg";
+import file from "../../assets/images/unnamed.jpg";
 import React, { useEffect, useRef } from "react";
 import * as Minio from "minio";
 
@@ -54,7 +54,7 @@ export const FileUploader = (props: any) => {
       minioClient.fPutObject(
         bucketID,
         "test-image.png",
-        props.file,
+        file,
         metaData,
         (err: any, objInfo: any) => {
           if (err) {
@@ -64,7 +64,7 @@ export const FileUploader = (props: any) => {
         }
     );
     insertFile();
-  }, [metaData, props.file]);
+  }, [metaData]);
   return (
     <>
       {/* <h1>This is a file uploader</h1> */}
